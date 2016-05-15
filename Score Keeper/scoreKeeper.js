@@ -49,7 +49,7 @@ function reset()
 	gameOver = false; //enable us to keep playing
 }
 numInput.addEventListener("change", function(){ //change is if any value changes
-	playTo.textContent = this.value; //"this" instead of "numInput"
-	winningScore = Number(this.value);
+	playTo.textContent = this.value; //"this" refers to whatever the event was listening on (numInput)
+	winningScore = Number(this.value);//"this" instead of "numInput"
 	reset();
 });
