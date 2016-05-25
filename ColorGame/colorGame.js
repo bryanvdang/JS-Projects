@@ -19,7 +19,7 @@ buttonEasy.addEventListener("click",function(){
 	colorDisplay.textContent = pickedColor; //change text content to the new picked color
 	//hide the bottom 3 squars
 	h1.style.background = "steelblue";
-	
+
 	for(var i = 0; i < squares.length; i++){
 		if(colors[i]){ //if you are at an index in the colors array
 		squares[i].style.background = colors[i]; //give each square a new color for however many colors[i] there are. Which is set to 3
@@ -28,9 +28,6 @@ buttonEasy.addEventListener("click",function(){
 		squares[i].style.display = "none";
 	}
 	background: steelblue;
-
-
-
 })
 buttonHard.addEventListener("click",function(){
 	buttonEasy.classList.remove("selected");
@@ -47,11 +44,9 @@ buttonHard.addEventListener("click",function(){
 		squares[i].style.display = "block";
 	}
 	background: steelblue;
-
-
 })
 
-
+//USER CLICKS NEW COLORS(RESET)
 buttonReset.addEventListener("click", function(){
 	//generate all new colors
 	colors = generateRandomColors(numSquares);
